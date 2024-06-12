@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,8 +10,46 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html>
+      <body>
+        <header className="header">
+          <div className="header-content">
+            <h1 className="logo">Restaurant</h1>
+            <nav className="nav">
+              <ul>
+                <li>
+                  <a href="#home">Home</a>
+                </li>
+                <li>
+                  <a href="#menu">Menu</a>
+                </li>
+                <li>
+                  <a href="#about">About Us</a>
+                </li>
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <main className="main">{children}</main>
+        <footer className="footer">
+          <div className="footer-content">
+            <p>&copy; 2024 Restaurant. All rights reserved.</p>
+            <nav className="footer nav">
+              <ul>
+                <li>
+                  <a href="#privacy">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#terms">Terms of Service</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+      </body>
     </html>
   );
 }
