@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"],
-      "@/app/layout": ["./src/app/layout.jsx"]
+      "@/*": ["./src*"]
     }
   }
 }
